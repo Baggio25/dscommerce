@@ -1,5 +1,6 @@
 package com.devsuperior.dscommerce.entities;
 
+import com.devsuperior.dscommerce.dto.ProductDTO;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -93,4 +94,6 @@ public class Product {
     public List<Order> getOrders() {
         return items.stream().map(x -> x.getOrder()).toList();
     }
+
+
 }
