@@ -1,10 +1,14 @@
 package com.devsuperior.dscommerce.dto;
 
+import com.devsuperior.dscommerce.entities.Category;
 import com.devsuperior.dscommerce.entities.Product;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class ProductDTO {
 
@@ -24,7 +28,17 @@ public class ProductDTO {
 
     private String imgUrl;
 
+    private Set<CategoryDTO> categories = new HashSet<>();
+
     public ProductDTO() {
+    }
+
+    public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imgUrl = imgUrl;
     }
 
     public ProductDTO(Product product) {
@@ -33,6 +47,10 @@ public class ProductDTO {
         description = product.getDescription();
         price = product.getPrice();
         imgUrl = product.getImgUrl();
+
+        for(Category category : product.getCategories()) {
+            categories.add(new CategoryDTO(category));
+        }
     }
 
     public Long getId() {
@@ -53,5 +71,9 @@ public class ProductDTO {
 
     public String getImgUrl() {
         return imgUrl;
+    }
+
+    public Set<CategoryDTO> getCategories() {
+        return categories;
     }
 }
