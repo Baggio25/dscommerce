@@ -82,10 +82,16 @@ public class ProductService {
         product.setPrice(dto.getPrice());
         product.setImgUrl(dto.getImgUrl());
 
+        if(product.getId() != null) {
+            product.getCategories().clear();
+        }
+
         for(CategoryDTO categoryDTO : dto.getCategories()) {
-            //Category category = new Category();
+            ///// Carrega somente o id da categoria
+            // Category category = new Category();
             //category.setId(categoryDTO.getId());
-            
+
+            ///// Carrega o id e o nome da categoria para exibição
             Category category = categoryRepository.getReferenceById(categoryDTO.getId());
             product.getCategories().add(category);
         }
