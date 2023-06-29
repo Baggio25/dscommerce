@@ -1,3 +1,7 @@
+/****************************************
+* Html default Styles
+****************************************/
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 * {
@@ -31,6 +35,10 @@ body {
   background-color: var(--gray-500);
 }
 
+/****************************************
+* Header Styles
+****************************************/
+
 header {
   display: flex;
   align-items: center;
@@ -45,20 +53,27 @@ nav {
   color: var(--gray-700);
 }
 
+nav h1 {
+  font-size: 24px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 main {
   padding: 20px 0;
 }
+
+/****************************************
+* Generic Styles
+****************************************/
 
 .dsc-container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-}
-
-.dsc-card {
-  border-radius: 5px;
-  border: 1px solid var(--gray-600);
-  background-color: var(--white);
 }
 
 .dsc-product-price {
@@ -101,6 +116,14 @@ main {
   border-bottom: 1px solid var(--gray-600);
 }
 
+.dsc-mb-20 {
+  margin-bottom: 20px;
+}
+
+/****************************************
+* Button Styles
+****************************************/
+
 .dsc-btn-page-container {
   display: grid;
   grid-gap: 20px;
@@ -129,6 +152,14 @@ main {
   background-color: var(--white);
 }
 
-.dsc-mb-20 {
-  margin-bottom: 20px;
+
+/****************************************
+* Card Styles
+****************************************/
+
+.dsc-card {
+  border-radius: 5px;
+  border: 1px solid var(--gray-600);
+  background-color: var(--white);
 }
+
