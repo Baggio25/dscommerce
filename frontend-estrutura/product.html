@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+
+    <title>DSCommerce</title>
+  </head>
+  <body>
+    <header>
+      <nav class="dsc-container">
+        <h1>DSCommerce</h1>
+        <div class="dsc-logged-user">
+          <p>Maria Silva</p>
+          <a href="#">Sair</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="dsc-container">
+        <div class="dsc-product-form-container">
+          <form class="dsc-card dsc-form">
+            <h2>Login</h2>
+            <div class="dsc-form-controls-container">
+              <div>
+                <input
+                  class="dsc-form-control"
+                  type="text"
+                  placeholder="Nome"
+                  autofocus
+                />
+              </div>
+              <div>
+                <input
+                  class="dsc-form-control"
+                  type="text"
+                  placeholder="Preço"
+                />
+              </div>
+              <div>
+                <input
+                  class="dsc-form-control"
+                  type="text"
+                  placeholder="Imagem"
+                />
+              </div>
+              <div>
+                <select
+                  class="dsc-form-control dsc-select"
+                  required
+                >
+                  <option disabled selected>Categorias</option>
+                  <option>Eletrônicos</option>
+                  <option>Informática</option>
+                </select>
+              </div>
+              <div>
+                <textarea 
+                  class="dsc-form-control dsc-text-area"
+                  placeholder="Descrição"
+                >
+                </textarea>
+              </div>
+              
+            </div>
+
+            <div class="dsc-product-form-buttons">
+              <button type="submit" class="dsc-btn dsc-btn-white">Cancelar</button>
+              <button type="submit" class="dsc-btn dsc-btn-blue">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
