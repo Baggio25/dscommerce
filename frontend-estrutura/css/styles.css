@@ -67,7 +67,6 @@ nav a {
   font-weight: 700;
 }
 
-
 /****************************************
 * Generic Styles
 ****************************************/
@@ -114,8 +113,8 @@ nav a {
   color: var(--gray-700);
 }
 
-.dsc-line-bottom {
-  border-bottom: 1px solid var(--gray-600);
+.dsc-mt-20 {
+  margin-top: 20px;
 }
 
 .dsc-mb-20 {
@@ -160,6 +159,17 @@ nav a {
   background-color: var(--white);
 }
 
+.dsc-next-page {
+  border: 1px solid var(--blue-500);
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--blue-500);
+  background-color: var(--white);
+}
 
 /****************************************
 * Card Styles
@@ -171,3 +181,6 @@ nav a {
   background-color: var(--white);
 }
 
+.dsc-line-bottom {
+  border-bottom: 1px solid var(--gray-600);
+}
