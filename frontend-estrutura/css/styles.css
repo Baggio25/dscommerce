@@ -49,65 +49,65 @@ main {
   padding: 20px 0;
 }
 
-.container {
+.dsc-container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.card {
+.dsc-card {
   border-radius: 5px;
   border: 1px solid var(--gray-600);
   background-color: var(--white);
 }
 
-.product-price {
+.dsc-product-price {
   font-weight: 700;
   color: var(--green-500);
 }
 
-.product-price-20 {
+.dsc-product-price-20 {
   font-size: 20px;
 }
 
-.product-price-16 {
+.dsc-product-price-16 {
   font-size: 16px;
 }
 
-.product-price-12 {
+.dsc-product-price-12 {
   font-size: 12px;
 }
 
-.product-name-14 {
+.dsc-product-name-14 {
   font-size: 14px;
 }
 
-.product-name-12 {
+.dsc-product-name-12 {
   font-size: 12px;
 }
 
-.product-name {
+.dsc-product-name {
   font-weight: 700;
   color: var(--gray-700);
 }
 
-.product-description {
+.dsc-product-description {
   margin: 10px 0;
   font-size: 14px;
   color: var(--gray-700);
 }
 
-.line-bottom {
+.dsc-line-bottom {
   border-bottom: 1px solid var(--gray-600);
 }
 
-.btn-page-container {
+.dsc-btn-page-container {
   display: grid;
   grid-gap: 20px;
   width: 220px;
 }
 
-.btn {
+.dsc-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,17 +118,17 @@ main {
   font-weight: 700;
 }
 
-.btn-blue {
+.dsc-btn-blue {
   color: var(--white);
   background-color: var(--blue-500);
 }
 
-.btn-white {
+.dsc-btn-white {
   border: 1px solid var(--blue-500);
   color: var(--blue-500);
   background-color: var(--white);
 }
 
-.mb-20 {
+.dsc-mb-20 {
   margin-bottom: 20px;
 }

@@ -1,23 +1,23 @@
 
-.product-details-top {
+.dsc-product-details-top {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
 
-.product-details-top img {
+.dsc-product-details-top img {
   width: 220px;
 }
 
-.product-details-bottom {
+.dsc-product-details-bottom {
   padding: 10px 20px 20px 20px;
 }
 
-.category-container {
+.dsc-category-container {
   display: flex;
 }
 
-.category {
+.dsc-category {
   display: flex;
   justify-content: center;
   align-items: center;
