@@ -35,6 +35,10 @@ body {
   background-color: var(--gray-500);
 }
 
+main {
+  padding: 0 20px;
+}
+
 /****************************************
 * Header Styles
 ****************************************/
@@ -43,6 +47,7 @@ header {
   display: flex;
   align-items: center;
   height: 70px;
+  padding: 0 20px;
   background-color: var(--yellow-500);
 }
 
@@ -62,9 +67,6 @@ nav a {
   font-weight: 700;
 }
 
-main {
-  padding: 20px 0;
-}
 
 /****************************************
 * Generic Styles
@@ -73,7 +75,7 @@ main {
 .dsc-container {
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .dsc-product-price {
@@ -127,7 +129,13 @@ main {
 .dsc-btn-page-container {
   display: grid;
   grid-gap: 20px;
-  width: 220px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .dsc-btn-page-container {
+    width: 220px;
+  }
 }
 
 .dsc-btn {
