@@ -1,0 +1,32 @@
+
+.product-details-top {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-details-top img {
+  width: 220px;
+}
+
+.product-details-bottom {
+  padding: 10px 20px 20px 20px;
+}
+
+.category-container {
+  display: flex;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 0px 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--gray-700);
+}
