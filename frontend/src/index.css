@@ -53,16 +53,6 @@ header {
   background-color: var(--yellow-500);
 }
 
-.dsc-header-client {
-  background-color: var(--yellow-500);
-  color: var(--gray-700);
-}
-
-.dsc-header-admin {
-  background-color: var(--green-500);
-  color: var(--white);
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -230,18 +220,6 @@ nav a {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-}
-
-.dsc-btn-blue {
-  border: none;
-  color: var(--white);
-  background-color: var(--blue-500);
-}
-
-.dsc-btn-white {
-  border: 1px solid var(--blue-500);
-  color: var(--blue-500);
-  background-color: var(--white);
 }
 
 .dsc-next-page {

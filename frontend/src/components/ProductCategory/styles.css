@@ -1,0 +1,14 @@
+.dsc-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 0px 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--gray-700);
+}
