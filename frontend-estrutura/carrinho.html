@@ -10,16 +10,24 @@
     <title>DSCommerce</title>
   </head>
   <body>
-    <header>
+    <header class="dsc-header-client">
       <nav class="dsc-container">
         <h1>DSCommerce</h1>
-        <a href="#">Entrar</a>
+        <div class="dsc-navbar-right">
+          <div class="dsc-menu-items-container">
+            <div class="dsc-menu-item">
+              <img src="images/cart.svg" alt="cart" />
+            </div>
+          </div>
+          <div class="dsc-logged-user">
+            <a href="#">Entrar</a>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       <section class="dsc-container">
         <div class="dsc-card dsc-mb-20">
-          
           <div class="dsc-cart-item-container dsc-line-bottom">
             <div class="dsc-cart-item-left">
               <img src="images/pc.png" alt="computer" />
@@ -35,10 +43,12 @@
               </div>
             </div>
             <div class="dsc-cart-item-right">
-              <h3 class="dsc-product-price dsc-product-price-12">R$ 5.000,00</h3>
+              <h3 class="dsc-product-price dsc-product-price-12">
+                R$ 5.000,00
+              </h3>
             </div>
           </div>
-          
+
           <div class="dsc-cart-item-container dsc-line-bottom">
             <div class="dsc-cart-item-left">
               <img src="images/pc.png" alt="computer" />
@@ -54,7 +64,9 @@
               </div>
             </div>
             <div class="dsc-cart-item-right">
-              <h3 class="dsc-product-price dsc-product-price-12">R$ 5.000,00</h3>
+              <h3 class="dsc-product-price dsc-product-price-12">
+                R$ 5.000,00
+              </h3>
             </div>
           </div>
           <div class="dsc-cart-total-container">

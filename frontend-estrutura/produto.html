@@ -10,12 +10,25 @@
     <title>DSCommerce</title>
   </head>
   <body>
-    <header>
+    <header class="dsc-header-admin">
       <nav class="dsc-container">
-        <h1>DSCommerce</h1>
-        <div class="dsc-logged-user">
-          <p>Maria Silva</p>
-          <a href="#">Sair</a>
+        <h1>DSC Admin</h1>
+
+        <div class="dsc-navbar-right">
+          <div class="dsc-menu-items-container">
+            <div class="dsc-menu-item">
+              <img src="images/home.svg" alt="home" />
+              <p>Início</p>
+            </div>
+            <div class="dsc-menu-item dsc-menu-item-active">
+              <img src="images/products.svg" alt="products" />
+              <p>Produtos</p>
+            </div>
+          </div>
+          <div class="dsc-logged-user">
+            <p>Maria Silva</p>
+            <a href="#">Sair</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -48,27 +61,25 @@
                 />
               </div>
               <div>
-                <select
-                  class="dsc-form-control dsc-select"
-                  required
-                >
+                <select class="dsc-form-control dsc-select" required>
                   <option disabled selected>Categorias</option>
                   <option>Eletrônicos</option>
                   <option>Informática</option>
                 </select>
               </div>
               <div>
-                <textarea 
+                <textarea
                   class="dsc-form-control dsc-text-area"
                   placeholder="Descrição"
                 >
                 </textarea>
               </div>
-              
             </div>
 
             <div class="dsc-product-form-buttons">
-              <button type="submit" class="dsc-btn dsc-btn-white">Cancelar</button>
+              <button type="submit" class="dsc-btn dsc-btn-white">
+                Cancelar
+              </button>
               <button type="submit" class="dsc-btn dsc-btn-blue">Salvar</button>
             </div>
           </form>

@@ -25,7 +25,7 @@ a:hover {
 
   --blue-500: #3483fa;
 
-  --green-500: #0caf1d;
+  --green-500: #0CAF1D;
 
   --yellow-500: #fff159;
 
@@ -53,11 +53,20 @@ header {
   background-color: var(--yellow-500);
 }
 
+.dsc-header-client {
+  background-color: var(--yellow-500);
+  color: var(--gray-700);
+}
+
+.dsc-header-admin {
+  background-color: var(--green-500);
+  color: var(--white);
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--gray-700);
 }
 
 nav h1 {
@@ -79,7 +88,22 @@ nav a {
 }
 
 .dsc-menu-item {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.dsc-menu-item-active {
+  padding: 2px;
+  border-bottom: 1px solid var(--white);
+  font-weight: 700;
+}
+
+.dsc-menu-item p {
+  display: none;
+  font-size: 14px;
 }
 
 .dsc-menu-item img {
@@ -100,6 +124,11 @@ nav a {
 @media (min-width: 576px) {
   nav h1 {
     font-size: 24px;
+  }
+
+  .dsc-menu-item p {
+    display: unset;
+    margin-left: 5px;
   }
 }
 
