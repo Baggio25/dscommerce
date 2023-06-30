@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/product-listing.css" />
+    <title>DSCommerce</title>
+  </head>
+  <body>
+    <header>
+      <nav class="dsc-container">
+        <h1>DSCommerce</h1>
+        <div class="dsc-logged-user">
+          <p>Maria Silva</p>
+          <a href="#">Sair</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="dsc-container">
+        <h2 class="dsc-section-title dsc-mb-20">Cadastro de Produtos</h2>
+
+        <div class="dsc-btn-page-container dsc-mb-20">
+          <div class="dsc-btn dsc-btn-white">Início</div>
+        </div>
+
+        <form class="dsc-search-bar">
+          <button type="submit">🔎︎</button>
+          <input type="text" placeholder="Nome do produto" />
+          <button type="reset">X</button>
+        </form>
+
+        <table class="dsc-table dsc-mb-20 dsc-mt-20">
+          <thead>
+            <th class="dsc-tb576">ID</th>
+            <th></th>
+            <th class="dsc-tb768">Preço</th>
+            <th class="dsc-txt-left">Nome</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dsc-tb576">
+                341
+              </td>
+              <td>
+                <img
+                  class="dsc-product-listing-image"
+                  src="images/pc.png"
+                  alt="computer"
+                />
+              </td>
+              <td class="dsc-tb768">
+                R$ 5.000,00
+              </td>
+              <td class="dsc-txt-left">Computador Gamer XT</td>
+              <td>
+                <img class="dsc-product-listing-btn" src="images/edit.svg" alt="edit" />
+              </td>
+              <td>
+                <img class="dsc-product-listing-btn" src="images/delete.svg" alt="delete" />
+              </td>
+            </tr>
+            <tr>
+              <td class="dsc-tb576">
+                342
+              </td>
+              <td>
+                <img
+                  class="dsc-product-listing-image"
+                  src="images/pc.png"
+                  alt="computer"
+                />
+              </td>
+              <td class="dsc-tb768">
+                R$ 5.000,00
+              </td>
+              <td class="dsc-txt-left">Computador Gamer XT</td>
+              <td>
+                <img class="dsc-product-listing-btn" src="images/edit.svg" alt="edit" />
+              </td>
+              <td>
+                <img class="dsc-product-listing-btn" src="images/delete.svg" alt="delete" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="dsc-next-page">Carregar mais</div>
+      </section>
+    </main>
+  </body>
+</html>
