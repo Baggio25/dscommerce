@@ -222,17 +222,6 @@ nav a {
   font-weight: 700;
 }
 
-.dsc-next-page {
-  border: 1px solid var(--blue-500);
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  color: var(--blue-500);
-  background-color: var(--white);
-}
 
 /****************************************
 * Card Styles
@@ -246,53 +235,6 @@ nav a {
 
 .dsc-line-bottom {
   border-bottom: 1px solid var(--gray-600);
-}
-
-/****************************************
-* SearchBar Styles
-****************************************/
-
-.dsc-search-bar {
-  display: flex;
-  height: 40px;
-  color: var(--gray-700);
-}
-
-.dsc-search-bar button,
-.dsc-search-bar input {
-  border: 1px solid var(--gray-600);
-}
-
-.dsc-search-bar input::placeholder {
-  color: var(--gray-600);
-}
-
-.dsc-search-bar input {
-  width: calc(100% - 80px);
-  padding: 0px 10px;
-  border-right: none;
-  border-left: none;
-  font-size: 14px;
-  color: var(--gray-700);
-}
-
-.dsc-search-bar input:focus {
-  outline: none;
-}
-
-.dsc-search-bar button {
-  color: var(--gray-700);
-  width: 40px;
-}
-
-.dsc-search-bar button[type="submit"] {
-  border-radius: 4px 0 0 4px;
-  border-right: none;
-}
-
-.dsc-search-bar button[type="reset"] {
-  border-radius: 0px 4 4px 0;
-  border-left: none;
 }
 
 /****************************************
