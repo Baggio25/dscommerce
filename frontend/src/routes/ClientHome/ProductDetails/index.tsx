@@ -1,39 +1,27 @@
+import { useParams } from "react-router-dom";
+import * as productService from "../../../services/product-service";
+
 import { ButtomInverse } from "../../../components/ButtonInverse";
 import { ButtomPrimary } from "../../../components/ButtonPrimary";
-import { HeaderClient } from "../../../components/HeaderClient";
 import { ProductDetailsCard } from "../../../components/ProductDetailsCard";
-import { ProductDTO } from "../../../models/product";
 
 import "./styles.css";
 
-const product: ProductDTO = {
-  id: 1,
-  name: "Smartv LG 55 polegadas",
-  description: "Aparelho  de alta tecnologia",
-  imgUrl:
-    "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/2-big.jpg",
-  price: 3568.99,
-  categories: [
-    {
-      id: 2,
-      name: "Eletrônicos",
-    },
-    {
-      id: 3,
-      name: "Televisores",
-    },
-  ],
-};
 
 export function ProductDetails() {
+  const params = useParams();
+  const product = productService.findById(Number(params.productId));
+
   return (
     <main>
       <section className="dsc-container">
-        <ProductDetailsCard product={product} />
+        { product && 
+          <ProductDetailsCard product={product} />
+        }
 
         <div className="dsc-btn-page-container">
           <ButtomPrimary text="Comprar" />
-          <ButtomInverse text="Início" />
+          <ButtomInverse text="Início" url="/"/>
         </div>
       </section>
     </main>
