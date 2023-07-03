@@ -1,11 +1,12 @@
 
 import "./styles.css";
 
-export function ProductCategory() {
+type ProductCategoryProps = {
+  name: string;
+}
+
+export function ProductCategory({ name }: ProductCategoryProps) {
   return (
-    <div className="dsc-category-container">
-      <div className="dsc-category">Eletrônicos</div>
-      <div className="dsc-category">Computadores</div>
-    </div>
+      <div className="dsc-category">{name}</div>
   );
 }
