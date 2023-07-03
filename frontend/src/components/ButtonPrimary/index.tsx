@@ -1,11 +1,15 @@
 
 import "./styles.css";
 
-export function ButtomPrimary() {
+type ButtomPrimaryProps = { 
+  text: string;
+}
+
+export function ButtomPrimary({ text }: ButtomPrimaryProps) {
   return (
     <>
       <div className="dsc-btn dsc-btn-blue">
-        Comprar
+        {text}
       </div>
     </>
   );
