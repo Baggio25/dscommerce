@@ -1,0 +1,10 @@
+.dsc-notfound {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+.dsc-notfound h2{
+  margin-bottom: 10px;
+  color: var(--gray-700);
+}
