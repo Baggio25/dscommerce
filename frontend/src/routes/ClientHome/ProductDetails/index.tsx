@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 import * as productService from "../../../services/product-service";
 import { ButtomInverse } from "../../../components/ButtonInverse";
@@ -12,15 +11,15 @@ import "./styles.css";
 
 export function ProductDetails() {
   const [product, setProduct] = useState<ProductDTO>();
-  const params = useParams();
+  const { productId } = useParams();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/products/1").then((response) => {
-      console.log(response.data);
-      setProduct(response.data);
-    });
-
-  }, []);
+      productService.findById(Number(productId))
+      .then((response) => {
+        setProduct(response.data);
+      }
+    );
+  }, [productId]);
 
   return (
     <main>
