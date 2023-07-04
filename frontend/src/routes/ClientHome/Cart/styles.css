@@ -49,6 +49,11 @@
   padding: 10px 20px;
 }
 
+.dsc-cart-empt {
+  text-align: center;
+  padding: 10px;
+}
+
 @media (min-width: 576px) {
   .dsc-cart-item-container {
     flex-direction: row;

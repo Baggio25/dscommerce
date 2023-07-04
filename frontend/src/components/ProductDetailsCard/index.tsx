@@ -1,5 +1,6 @@
 import { ProductDTO } from "../../models/product";
 import { ProductCategory } from "../ProductCategory";
+import { formatPrice } from "../../utils/formatters";
 
 import "./styles.css";
 
@@ -15,7 +16,7 @@ export function ProductDetailsCard({ product }: ProductDetailsCardProps) {
       </div>
       <div className="dsc-product-details-bottom">
         <h3 className="dsc-product-price dsc-product-price-20">
-          R$ {product.price.toFixed(2)}
+          R$ {formatPrice(product.price)}
         </h3>
         <h4 className="dsc-product-name dsc-product-name-14">{product.name}</h4>
         <p className="dsc-product-description">{product.description}</p>

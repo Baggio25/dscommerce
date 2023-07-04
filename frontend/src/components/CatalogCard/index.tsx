@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProductDTO } from "../../models/product";
+import { formatPrice } from "../../utils/formatters";
 
 import "./styles.css";
 
@@ -16,7 +17,7 @@ export function CatalogCard({ product }: CatalogCardProps) {
         </div>
         <div className="dsc-catalog-card-bottom">
           <h3 className="dsc-product-price dsc-product-price-20">
-            R$ {product.price}
+            R$ {formatPrice(product.price)}
           </h3>
           <h4 className="dsc-product-name dsc-product-name-14">
             {product.name}
