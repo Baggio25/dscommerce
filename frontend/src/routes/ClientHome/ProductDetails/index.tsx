@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import * as productService from "../../../services/product-service";
 import { ButtomInverse } from "../../../components/ButtonInverse";
@@ -11,14 +12,18 @@ import "./styles.css";
 
 export function ProductDetails() {
   const [product, setProduct] = useState<ProductDTO>();
+  const navigate = useNavigate();
   const { productId } = useParams();
 
   useEffect(() => {
-      productService.findById(Number(productId))
+    productService
+      .findById(Number(productId))
       .then((response) => {
         setProduct(response.data);
-      }
-    );
+      })
+      .catch(() => {
+        navigate("/not-found");
+      });
   }, [productId]);
 
   return (
