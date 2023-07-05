@@ -11,6 +11,11 @@ import { ButtomInverse } from "../../../components/ButtonInverse";
 export function Cart() {
   const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
 
+  function handleClearClick() {
+    cartService.clearCart();
+    setCart(cartService.getCart());
+  }
+
   return (
     <main>
       <section className="dsc-container">
@@ -59,7 +64,8 @@ export function Cart() {
         )}
         <div className="dsc-btn-page-container">
           {cart.items.length > 0 && <ButtomPrimary text="Comprar" />}
-          <ButtomInverse text="Continuar Comprando" url="/"/>
+          <ButtomInverse text="Continuar Comprando" url="/" onClick={() => ""}/>
+          {cart.items.length > 0 && <ButtomInverse text="Limpar Carrinho" url="/cart" onClick={handleClearClick} />}
         </div>
       </section>
     </main>
