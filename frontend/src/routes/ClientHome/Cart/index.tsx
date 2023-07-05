@@ -16,6 +16,16 @@ export function Cart() {
     setCart(cartService.getCart());
   }
 
+  function handleIncreaseItem(productId: number) {
+    cartService.increaseItem(productId);
+    setCart(cartService.getCart());
+  }
+
+  function handleDecreaseItem(productId: number) {
+    cartService.decreaseItem(productId);
+    setCart(cartService.getCart());
+  }
+
   return (
     <main>
       <section className="dsc-container">
@@ -38,11 +48,21 @@ export function Cart() {
                         {item.name}
                       </h3>
                       <div className="dsc-cart-item-quantity-container">
-                        <div className="dsc-cart-item-quantity-btn">-</div>
+                        <div
+                          onClick={() => handleDecreaseItem(item.productId)}
+                          className="dsc-cart-item-quantity-btn"
+                        >
+                          -
+                        </div>
                         <p className="dsc-cart-item-quantity">
                           {item.quantity}
                         </p>
-                        <div className="dsc-cart-item-quantity-btn">+</div>
+                        <div
+                          onClick={() => handleIncreaseItem(item.productId)}
+                          className="dsc-cart-item-quantity-btn"
+                        >
+                          +
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -64,8 +84,18 @@ export function Cart() {
         )}
         <div className="dsc-btn-page-container">
           {cart.items.length > 0 && <ButtomPrimary text="Comprar" />}
-          <ButtomInverse text="Continuar Comprando" url="/" onClick={() => ""}/>
-          {cart.items.length > 0 && <ButtomInverse text="Limpar Carrinho" url="/cart" onClick={handleClearClick} />}
+          <ButtomInverse
+            text="Continuar Comprando"
+            url="/"
+            onClick={() => ""}
+          />
+          {cart.items.length > 0 && (
+            <ButtomInverse
+              text="Limpar Carrinho"
+              url="/cart"
+              onClick={handleClearClick}
+            />
+          )}
         </div>
       </section>
     </main>
