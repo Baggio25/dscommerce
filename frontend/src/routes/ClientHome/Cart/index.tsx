@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { OrderDTO } from "../../../models/order";
 import { formatPrice } from "../../../utils/formatters";
