@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { OrderDTO } from "../../../models/order";
 import { formatPrice } from "../../../utils/formatters";
+import { ContextCartCount } from "../../../utils/context-cart";
 import * as cartService from "../../../services/cart-service";
 
 import "./styles.css";
@@ -10,20 +11,27 @@ import { ButtomInverse } from "../../../components/ButtonInverse";
 
 export function Cart() {
   const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
+  const { setContextCartCount } = useContext(ContextCartCount);
 
   function handleClearClick() {
     cartService.clearCart();
-    setCart(cartService.getCart());
+    updateCart()
   }
 
   function handleIncreaseItem(productId: number) {
     cartService.increaseItem(productId);
-    setCart(cartService.getCart());
+    setCart(cartService.getCart());    
   }
 
   function handleDecreaseItem(productId: number) {
     cartService.decreaseItem(productId);
-    setCart(cartService.getCart());
+    updateCart()
+  }
+
+  function updateCart() {
+    const newCart = cartService.getCart(); 
+    setCart(newCart);
+    setContextCartCount(newCart.items.length);
   }
 
   return (
@@ -35,6 +43,16 @@ export function Cart() {
           </div>
         ) : (
           <>
+            {cart.items.length > 0 && (
+              <div className="dsc-button-container-clean dsc-mb-20">
+                <ButtomInverse
+                  isDanger
+                  text="Limpar Carrinho"
+                  url="/cart"
+                  onClick={handleClearClick}
+                />
+              </div>
+            )}
             <div className="dsc-card dsc-mb-20">
               {cart.items.map((item) => (
                 <div
@@ -89,13 +107,6 @@ export function Cart() {
             url="/"
             onClick={() => ""}
           />
-          {cart.items.length > 0 && (
-            <ButtomInverse
-              text="Limpar Carrinho"
-              url="/cart"
-              onClick={handleClearClick}
-            />
-          )}
         </div>
       </section>
     </main>

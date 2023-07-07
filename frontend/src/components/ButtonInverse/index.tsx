@@ -5,13 +5,23 @@ type ButtonInverseProps = {
   text: string;
   url: string;
   onClick?: () => void;
+  isDanger?: boolean;
 };
 
-export function ButtomInverse({ text, url, onClick }: ButtonInverseProps) {
+export function ButtomInverse({
+  text,
+  url,
+  onClick,
+  isDanger = false
+}: ButtonInverseProps) {
   return (
     <>
       <Link to={url} onClick={onClick}>
-        <div className="dsc-btn dsc-btn-white">{text}</div>
+        <div
+          className={`dsc-btn ${isDanger ? "dsc-btn-danger" : "dsc-btn-white"}`}
+        >
+          {text}
+        </div>
       </Link>
     </>
   );

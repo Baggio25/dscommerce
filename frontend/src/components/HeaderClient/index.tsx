@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import CartIcon from "../../assets/cart.svg";
+
+import CartIcon from "../CartIcon";
 
 import "./styles.css";
 
@@ -14,14 +15,12 @@ export function HeaderClient() {
           <div className="dsc-menu-items-container">
             <div className="dsc-menu-item">
               <Link to="/cart">
-                <img src={CartIcon} alt="cart" />
+                <CartIcon />
               </Link>
             </div>
           </div>
           <div className="dsc-logged-user">
-            <Link to="/login">
-              Entrar
-            </Link>
+            <Link to="/login">Entrar</Link>
           </div>
         </div>
       </nav>

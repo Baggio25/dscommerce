@@ -34,6 +34,7 @@ export function increaseItem(productId: number) {
     item.quantity++;
     saveCart(cart);
   }
+
 }
 
 export function decreaseItem(productId: number) {
