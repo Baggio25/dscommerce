@@ -6,6 +6,8 @@ import { ClientHome } from "./routes/ClientHome";
 import { Catalog } from "./routes/ClientHome/Catalog";
 import { PageNotFound } from "./routes/ClientHome/PageNotFound";
 import { Cart } from "./routes/ClientHome/Cart";
+import { Login } from "./routes/ClientHome/Login";
+
 import { ContextCartCount } from "./utils/context-cart";
 
 import * as cartRepository from "./localstorage/cart-repository";
@@ -28,6 +30,8 @@ function App() {
             />
 
             <Route path="cart" element={<Cart />} />
+
+            <Route path="login" element={<Login />} />
           </Route>
           <Route path="not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="not-found" />} />

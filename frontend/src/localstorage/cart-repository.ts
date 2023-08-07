@@ -10,11 +10,19 @@ export function save(cart: OrderDTO) {
 export function get(): OrderDTO {
   const str = localStorage.getItem(CART_STORAGE) || '{"items": []}';
   const obj = JSON.parse(str) as OrderDTO;
-  
+
   const cart = new OrderDTO();
-  obj.items.forEach(item => {
-    cart.items.push(new OrderItemDTO(item.productId, item.quantity, item.name, item.price, item.imgUrl))
-  })
+  obj.items.forEach((item) => {
+    cart.items.push(
+      new OrderItemDTO(
+        item.productId,
+        item.quantity,
+        item.name,
+        item.price,
+        item.imgUrl
+      )
+    );
+  });
 
   return cart;
 }
@@ -23,9 +31,7 @@ export function count(): number {
   const str = localStorage.getItem(CART_STORAGE) || '{"items": []}';
   const obj = JSON.parse(str) as OrderDTO;
 
-  console.log("Itens no carrinho: ", obj.items.map.length);
-
-  return obj.items.map.length;
+  return obj.items.length;
 }
 
 export function clear() {
