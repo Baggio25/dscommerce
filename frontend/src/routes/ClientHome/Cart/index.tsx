@@ -5,9 +5,10 @@ import { formatPrice } from "../../../utils/formatters";
 import { ContextCartCount } from "../../../utils/context-cart";
 import * as cartService from "../../../services/cart-service";
 
-import "./styles.css";
 import { ButtomPrimary } from "../../../components/ButtonPrimary";
 import { ButtomInverse } from "../../../components/ButtonInverse";
+
+import "./styles.css";
 
 export function Cart() {
   const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
@@ -25,7 +26,7 @@ export function Cart() {
 
   function handleDecreaseItem(productId: number) {
     cartService.decreaseItem(productId);
-    updateCart()
+    updateCart();
   }
 
   function updateCart() {

@@ -19,6 +19,15 @@ export function get(): OrderDTO {
   return cart;
 }
 
+export function count(): number {
+  const str = localStorage.getItem(CART_STORAGE) || '{"items": []}';
+  const obj = JSON.parse(str) as OrderDTO;
+
+  console.log("Itens no carrinho: ", obj.items.map.length);
+
+  return obj.items.map.length;
+}
+
 export function clear() {
   localStorage.setItem(CART_STORAGE, '{"items": []}');
 }

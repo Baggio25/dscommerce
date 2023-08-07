@@ -31,7 +31,7 @@ export function increaseItem(productId: number) {
   const item = cart.items.find(item => item.productId === productId);
 
   if(item) {
-    item.quantity++;
+    item.quantity += 1;
     saveCart(cart);
   }
 
@@ -42,7 +42,7 @@ export function decreaseItem(productId: number) {
   const item = cart.items.find(item => item.productId === productId);
 
   if(item) {
-    item.quantity--;
+    item.quantity -= 1;
 
     if(item.quantity < 1) {
       cart.items = cart.items.filter(item => item.productId !== productId);

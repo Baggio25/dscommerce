@@ -8,8 +8,10 @@ import { PageNotFound } from "./routes/ClientHome/PageNotFound";
 import { Cart } from "./routes/ClientHome/Cart";
 import { ContextCartCount } from "./utils/context-cart";
 
+import * as cartRepository from "./localstorage/cart-repository";
+
 function App() {
-  const [contextCartCount, setContextCartCount] = useState<number>(0);
+  const [contextCartCount, setContextCartCount] = useState<number>(cartRepository.count);
 
   return (
     <ContextCartCount.Provider
