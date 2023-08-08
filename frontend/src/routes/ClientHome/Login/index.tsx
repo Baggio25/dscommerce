@@ -17,7 +17,7 @@ export function Login() {
     event.preventDefault();
     authService.loginRequest(formData)
       .then(response => {
-        console.log(response.data);
+        authService.saveAccessToken(response.data.access_token)
       })
       .catch(error => {
         console.error("Erro no login", error);
