@@ -87,7 +87,7 @@ nav a {
 
 .dsc-menu-item-active {
   padding: 2px;
-  border-bottom: 1px solid var(--white);
+  /*border-bottom: 1px solid var(--white);*/
   font-weight: 700;
 }
 

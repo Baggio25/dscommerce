@@ -7,6 +7,8 @@ import { Catalog } from "./routes/ClientHome/Catalog";
 import { PageNotFound } from "./routes/ClientHome/PageNotFound";
 import { Cart } from "./routes/ClientHome/Cart";
 import { Login } from "./routes/ClientHome/Login";
+import { AdminHome } from "./routes/Admin/AdminHome";
+import { Admin } from "./routes/Admin";
 
 import { ContextCartCount } from "./utils/context-cart";
 
@@ -33,6 +35,11 @@ function App() {
 
             <Route path="login" element={<Login />} />
           </Route>
+
+          <Route path="/admin/" element={<Admin />}>
+            <Route index element={<AdminHome />} />
+          </Route>
+
           <Route path="not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="not-found" />} />
         </Routes>
