@@ -14,9 +14,6 @@ export function AdminHome() {
         setUser(response.data);
         console.log(response.data)
       })
-      .catch(error => {
-        console.log("Erro ao carregar usuário: ", error); 
-      });
   }, []);
 
   return (
