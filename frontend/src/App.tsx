@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 
 import { ProductDetails } from "./routes/ClientHome/ProductDetails";
 import { ClientHome } from "./routes/ClientHome";
@@ -11,6 +11,7 @@ import { AdminHome } from "./routes/Admin/AdminHome";
 import { Admin } from "./routes/Admin";
 
 import { ContextCartCount } from "./utils/context-cart";
+import { history } from "./utils/history";
 
 import * as cartRepository from "./localstorage/cart-repository";
 
@@ -21,7 +22,7 @@ function App() {
     <ContextCartCount.Provider
       value={{ contextCartCount, setContextCartCount}}
     >
-      <BrowserRouter>
+      <HistoryRouter history={history}>
         <Routes>
           <Route path="/" element={<ClientHome />}>
             <Route index element={<Catalog />} />
@@ -43,7 +44,7 @@ function App() {
           <Route path="not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="not-found" />} />
         </Routes>
-      </BrowserRouter>
+      </HistoryRouter>
     </ContextCartCount.Provider>
   );
 }
