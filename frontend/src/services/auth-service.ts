@@ -40,6 +40,11 @@ export function getAccessTokenPayload(): AccessTokenPayloadDTO | undefined {
   }
 }
 
+export function isAuthenticated(): boolean {
+  const tokenPayload = getAccessTokenPayload();
+  return tokenPayload && tokenPayload.exp * 1000 > Date.now() ? true : false; //identifica se o payload.exp é maior que o instante atual
+}
+
 export function logout() {
   accessTokenRepository.remove();
 }
@@ -51,4 +56,3 @@ export function saveAccessToken(token: string) {
 export function getAccessToken() {
   return accessTokenRepository.get();
 }
-
