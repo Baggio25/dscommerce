@@ -8,8 +8,6 @@ import "./styles.css";
 export default function CartIcon() {
   const { contextCartCount } = useContext(ContextCartCount);
 
-  console.log(contextCartCount);
-
   return (
     <>
       <div className="dsc-cart-count">{contextCartCount}</div>

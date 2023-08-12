@@ -14,13 +14,14 @@ import { ContextCartCount } from "./utils/context-cart";
 import { history } from "./utils/history";
 
 import * as cartRepository from "./localstorage/cart-repository";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 function App() {
   const [contextCartCount, setContextCartCount] = useState<number>(cartRepository.count);
 
   return (
     <ContextCartCount.Provider
-      value={{ contextCartCount, setContextCartCount}}
+      value={{ contextCartCount, setContextCartCount }}
     >
       <HistoryRouter history={history}>
         <Routes>
@@ -37,7 +38,13 @@ function App() {
             <Route path="login" element={<Login />} />
           </Route>
 
-          <Route path="/admin/" element={<Admin />}>
+          <Route path="/admin/"
+            element={
+              <PrivateRoute>
+                <Admin />
+              </PrivateRoute>
+            }
+          >
             <Route index element={<AdminHome />} />
           </Route>
 
