@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Navigate, Route, Routes, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import { Navigate, Route, Routes, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 
 import { ProductDetails } from "./routes/ClientHome/ProductDetails";
 import { ClientHome } from "./routes/ClientHome";
@@ -15,6 +15,7 @@ import { history } from "./utils/history";
 
 import * as cartRepository from "./localstorage/cart-repository";
 import { PrivateRoute } from "./components/PrivateRoute";
+import { PageForbidden } from "./routes/ClientHome/PageForbidden";
 
 function App() {
   const [contextCartCount, setContextCartCount] = useState<number>(cartRepository.count);
@@ -40,7 +41,7 @@ function App() {
 
           <Route path="/admin/"
             element={
-              <PrivateRoute>
+              <PrivateRoute roles={["ROLE_ADMIN"]}>
                 <Admin />
               </PrivateRoute>
             }
@@ -49,6 +50,7 @@ function App() {
           </Route>
 
           <Route path="not-found" element={<PageNotFound />} />
+          <Route path="forbidden" element={<PageForbidden />} />
           <Route path="*" element={<Navigate to="not-found" />} />
         </Routes>
       </HistoryRouter>

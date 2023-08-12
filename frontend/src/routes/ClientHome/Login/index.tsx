@@ -47,7 +47,7 @@ export function Login() {
                   name="username"
                   value={formData.username}
                   onChange={handleInputChange}
-                  className="dsc-form-control dsc-input-error"
+                  className="dsc-form-control"
                   type="text"
                   placeholder="E-mail"
                   autoFocus

@@ -1,0 +1,10 @@
+.dsc-forbidden {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.dsc-forbidden h3{
+  margin-bottom: 10px;
+  color: var(--gray-700);
+}
