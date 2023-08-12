@@ -1,6 +1,7 @@
 
 import homeIcon from "../../assets/home.svg";
 import productsIcon from "../../assets/products.svg";
+import { LoggedUser } from "../LoggedUser";
 
 import "./styles.css";
 
@@ -21,10 +22,7 @@ export function HeaderAdmin() {
               <p>Produtos</p>
             </div>
           </div>
-          <div className="dsc-logged-user">
-            <p>Maria Silva</p>
-            <a href="#">Sair</a>
-          </div>
+          <LoggedUser />
         </div>
       </nav>
     </header>

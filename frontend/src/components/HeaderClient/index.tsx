@@ -7,6 +7,7 @@ import iconAdmin from "../../assets/admin.svg";
 import "./styles.css";
 import { useContext } from "react";
 import { ContextToken } from "../../utils/context-token";
+import { LoggedUser } from "../LoggedUser";
 
 export function HeaderClient() {
   const { contextTokenPayload } = useContext(ContextToken);
@@ -19,7 +20,7 @@ export function HeaderClient() {
         </Link>
         <div className="dsc-navbar-right">
           <div className="dsc-menu-items-container">
-            { 
+            {
               contextTokenPayload &&
               authService.hasAnyRoles(["ROLE_ADMIN"]) &&
               <div className="dsc-menu-item">
@@ -34,9 +35,7 @@ export function HeaderClient() {
               </Link>
             </div>
           </div>
-          <div className="dsc-logged-user">
-            <Link to="/login">Entrar</Link>
-          </div>
+          <LoggedUser />
         </div>
       </nav>
     </header>

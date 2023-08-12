@@ -111,6 +111,11 @@ nav a {
   font-size: 12px;
 }
 
+.dsc-logged-user span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 @media (min-width: 576px) {
   nav h1 {
     font-size: 24px;
