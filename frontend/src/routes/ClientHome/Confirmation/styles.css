@@ -1,0 +1,13 @@
+.dsc-confirmation-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+@media (min-width: 576px) {
+  .dsc-confirmation-message {
+    text-align: left;
+    font-size: 24px;
+  }
+}

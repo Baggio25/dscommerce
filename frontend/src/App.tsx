@@ -19,6 +19,7 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { PageForbidden } from "./routes/ClientHome/PageForbidden";
 import { AccessTokenPayloadDTO } from "./models/auth";
 import { ContextToken } from "./utils/context-token";
+import { Confirmation } from "./routes/ClientHome/Confirmation";
 
 function App() {
   const [contextTokenPayload, setContextTokenPayload] = useState<AccessTokenPayloadDTO>();
@@ -41,13 +42,9 @@ function App() {
             <Route path="/" element={<ClientHome />}>
               <Route index element={<Catalog />} />
               <Route path="catalog" element={<Catalog />} />
-              <Route
-                path="product-details/:productId"
-                element={<ProductDetails />}
-              />
-
+              <Route path="product-details/:productId" element={<ProductDetails />}/>
               <Route path="cart" element={<Cart />} />
-
+              <Route path="confirmation/:orderId" element={<Confirmation />}/>
               <Route path="login" element={<Login />} />
             </Route>
 
