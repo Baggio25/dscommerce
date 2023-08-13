@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 import homeIcon from "../../assets/home.svg";
 import productsIcon from "../../assets/products.svg";
@@ -13,14 +14,21 @@ export function HeaderAdmin() {
 
         <div className="dsc-navbar-right">
           <div className="dsc-menu-items-container">
-            <div className="dsc-menu-item">
-              <img src={homeIcon} alt="home" />
-              <p>Início</p>
-            </div>
-            <div className="dsc-menu-item dsc-menu-item-active">
-              <img src={productsIcon} alt="products" />
-              <p>Produtos</p>
-            </div>
+
+            <NavLink to="/admin">
+              <div className="dsc-menu-item">
+                <img src={homeIcon} alt="home" />
+                <p>Início</p>
+              </div>
+            </NavLink>
+
+            <NavLink to="/admin/products">
+              <div className="dsc-menu-item dsc-menu-item-active">
+                <img src={productsIcon} alt="products" />
+                <p>Produtos</p>
+              </div>
+            </NavLink>
+
           </div>
           <LoggedUser />
         </div>
