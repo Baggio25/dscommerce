@@ -65,7 +65,6 @@ nav h1 {
 
 nav a {
   font-size: 14px;
-  font-weight: 700;
 }
 
 .dsc-navbar-right {
@@ -93,7 +92,7 @@ nav a {
 
 .dsc-menu-item p {
   display: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .dsc-menu-item img {

@@ -15,15 +15,21 @@ export function HeaderAdmin() {
         <div className="dsc-navbar-right">
           <div className="dsc-menu-items-container">
 
-            <NavLink to="/admin">
+            <NavLink
+              /*className={({ isActive }) => isActive ? "dsc-menu-item-active" : ""}*/
+              to="/admin"
+            >
               <div className="dsc-menu-item">
                 <img src={homeIcon} alt="home" />
                 <p>Início</p>
               </div>
             </NavLink>
 
-            <NavLink to="/admin/products">
-              <div className="dsc-menu-item dsc-menu-item-active">
+            <NavLink
+              /*className={({ isActive }) => isActive ? "dsc-menu-item-active" : ""}*/
+              to="/admin/products"
+            >
+              <div className="dsc-menu-item ">
                 <img src={productsIcon} alt="products" />
                 <p>Produtos</p>
               </div>
